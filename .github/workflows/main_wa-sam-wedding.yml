@@ -69,4 +69,3 @@ jobs:
           app-name: 'wa-sam-wedding'
           slot-name: 'Production'
           package: ./app
-          deployment-method: zipDeploy
