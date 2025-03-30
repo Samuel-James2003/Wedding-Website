@@ -71,5 +71,5 @@ jobs:
         with:
           app-name: 'wa-sam-wedding'
           slot-name: 'Production'
-          package: .
+          package: './app/build'
           
