@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
-import MenuPage from "./components/MenuPage";
-import WelcomePage from "./components/WelcomePage";
+import { WelcomePage, MenuPage, SeatingChart } from "./components"
 
 const App: React.FC = () => {
   return (
@@ -9,7 +8,8 @@ const App: React.FC = () => {
       <div>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
-          <Route path="/Menu" element={<MenuPage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/seating" element={<SeatingChart />} />
         </Routes>
       </div>
     </Router>
