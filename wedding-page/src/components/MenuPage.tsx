@@ -16,6 +16,7 @@ const MenuPage: React.FC = () => {
             <ListItem><ListItemText primary="Mini quiche" /></ListItem>
             <ListItem><ListItemText primary="Salmon canape" /></ListItem>
             <ListItem><ListItemText primary="Spanakopita" /></ListItem>
+            <ListItem><ListItemText primary="Charcuterie & Crudité board" /></ListItem>
           </List>
         </Box>
 
