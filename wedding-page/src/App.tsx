@@ -1,15 +1,18 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
-import MenuPage from "./components/MenuPage";
-import WelcomePage from "./components/WelcomePage";
+import { WelcomePage, MenuPage, SeatingChart, Rsvp, Registry, Banner } from "./components"
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Banner/>
       <div>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
-          <Route path="/Menu" element={<MenuPage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/seating" element={<SeatingChart />} />
+          <Route path="/rsvp" element={<Rsvp />} />
+          <Route path="/registry" element={<Registry />} />
         </Routes>
       </div>
     </Router>

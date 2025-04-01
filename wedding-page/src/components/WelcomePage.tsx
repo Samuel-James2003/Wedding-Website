@@ -1,11 +1,11 @@
-import React from 'react';
-import { Container, Typography, Button, Paper, Box } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import React from "react";
+import { Container, Typography, Button, Paper, Box } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 const WelcomePage: React.FC = () => {
   return (
     <Container maxWidth="sm" sx={{ my: 8 }}>
-      <Paper elevation={3} sx={{ textAlign: 'center', p: 4 }}>
+      <Paper elevation={3} sx={{ textAlign: "center", p: 4 }}>
         <Typography variant="h3" gutterBottom>
           Welcome to Our Wedding!
         </Typography>
@@ -20,6 +20,14 @@ const WelcomePage: React.FC = () => {
             color="primary"
           >
             View Menu
+          </Button>
+          <Button
+            component={RouterLink}
+            to="/seating"
+            variant="contained"
+            color="secondary"
+          >
+            Seating Chart
           </Button>
         </Box>
       </Paper>
