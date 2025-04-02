@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Typography, Button, Paper, Box } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Container, Typography, Paper } from "@mui/material";
 
 const WelcomePage: React.FC = () => {
   return (
