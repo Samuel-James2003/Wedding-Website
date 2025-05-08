@@ -2,7 +2,7 @@
   "name": "wedding-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Samuel-James2003.github.io/Wedding-Website",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -29,9 +29,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:azure": "PUBLIC_URL=. react-scripts build",
+    "build:github": "PUBLIC_URL=/Wedding-Website react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:github",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
