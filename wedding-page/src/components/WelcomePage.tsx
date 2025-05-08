@@ -17,24 +17,6 @@ const WelcomePage: React.FC = () => {
           <Typography variant="body1" gutterBottom>
           ...
         </Typography>
-        <Box sx={{ mt: 4 }}>
-          <Button
-            component={RouterLink}
-            to="/menu"
-            variant="contained"
-            color="primary"
-          >
-            View Menu
-          </Button>
-          <Button
-            component={RouterLink}
-            to="/seating"
-            variant="contained"
-            color="secondary"
-          >
-            Seating Chart
-          </Button>
-        </Box>
       </Paper>
     </Container>
   );
