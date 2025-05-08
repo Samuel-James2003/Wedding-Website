@@ -11,6 +11,30 @@ const WelcomePage: React.FC = () => {
         <Typography variant="body1" gutterBottom>
           We're delighted to have you celebrate this special day with us.
         </Typography>
+        <Typography variant="h3" gutterBottom>
+          Our Love Story
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+          ...
+        </Typography>
+        <Box sx={{ mt: 4 }}>
+          <Button
+            component={RouterLink}
+            to="/menu"
+            variant="contained"
+            color="primary"
+          >
+            View Menu
+          </Button>
+          <Button
+            component={RouterLink}
+            to="/seating"
+            variant="contained"
+            color="secondary"
+          >
+            Seating Chart
+          </Button>
+        </Box>
       </Paper>
     </Container>
   );
