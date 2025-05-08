@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
-import { WelcomePage, MenuPage, SeatingChart, Rsvp, Registry, Banner } from "./components"
+import { WelcomePage, MenuPage, SeatingChart, Rsvp, Registry, Banner, FAQ, Schedule } from "./components"
 
 const App: React.FC = () => {
   return (
@@ -13,6 +13,8 @@ const App: React.FC = () => {
           <Route path="/seating" element={<SeatingChart />} />
           <Route path="/rsvp" element={<Rsvp />} />
           <Route path="/registry" element={<Registry />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/schedule" element={<Schedule />} />
         </Routes>
       </div>
     </Router>

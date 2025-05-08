@@ -21,6 +21,8 @@ const navItems = [
   { label: "RSVP", path: "/rsvp" },
   { label: "Seating chart", path: "/seating" },
   { label: "Registry", path: "/registry" },
+  { label: "Schedule", path: "/schedule" },
+  { label: "FAQ", path: "/faq" },
 ];
 
 const Banner: React.FC = () => {
