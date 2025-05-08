@@ -9,13 +9,15 @@ import {
   Paper,
   Box,
 } from "@mui/material";
+import { publicUrl } from '../utils/publicurl';
+
 
 const MenuPage: React.FC = () => {
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: 'url("/images/menu-bg.png")',
+        backgroundImage: `url("${publicUrl}/images/menu-bg.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
