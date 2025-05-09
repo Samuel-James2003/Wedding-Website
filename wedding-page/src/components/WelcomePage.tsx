@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Typography, Paper } from "@mui/material";
+import Schedule  from "./Schedule";
 
 const WelcomePage: React.FC = () => {
   return (
@@ -11,13 +12,14 @@ const WelcomePage: React.FC = () => {
         <Typography variant="body1" gutterBottom>
           We're delighted to have you celebrate this special day with us.
         </Typography>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h4" gutterBottom>
           Our Love Story
           </Typography>
           <Typography variant="body1" gutterBottom>
           ...
         </Typography>
       </Paper>
+      < Schedule />
     </Container>
   );
 };

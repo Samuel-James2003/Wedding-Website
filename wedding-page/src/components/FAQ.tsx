@@ -45,19 +45,15 @@ const FAQ: React.FC = () => {
             },
             {
               question: "Is there parking available?",
-              answer: "Yes, there is ample parking available at the venue, including valet service.",
-            },
-            {
-              question: "Can I bring a plus one?",
-              answer: "Please check your invitation to see if a plus one has been included. Feel free to contact us if you have questions.",
+              answer: "Yes, there is ample parking available at the venue.",
             },
             {
               question: "Are children welcome?",
-              answer: "Yes, children are welcome! We will have a small play area and kid-friendly meals.",
+              answer: "No, this is an adult only affair.",
             },
             {
               question: "What time should I arrive?",
-              answer: "We recommend arriving 15-30 minutes before the event start time to get settled.",
+              answer: "We recommend arriving around 5:00 PM.",
             },
           ].map((faq, idx) => (
             <Box key={faq.question} my={3} width="100%">

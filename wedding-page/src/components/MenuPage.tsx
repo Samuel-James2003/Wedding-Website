@@ -9,15 +9,13 @@ import {
   Paper,
   Box,
 } from "@mui/material";
-import { publicUrl } from '../utils/publicurl';
-
 
 const MenuPage: React.FC = () => {
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: `url("${publicUrl}/images/menu-bg.png")`,
+        backgroundImage: 'url("/images/menu-bg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -70,7 +68,7 @@ const MenuPage: React.FC = () => {
           ].map((section, idx) => (
             <Box key={section.title} my={3} width="100%">
               {idx > 0 && <Divider />}
-              <Typography variant="h5" mt={idx > 0 ? 3 : 0} align="center"> 
+              <Typography variant="h5" mt={idx > 0 ? 3 : 0} align="center">
                 {section.title}
               </Typography>
               <List>
