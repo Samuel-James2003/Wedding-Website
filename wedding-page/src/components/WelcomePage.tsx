@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Typography, Button, Paper, Box } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Container, Typography, Paper } from "@mui/material";
+import Schedule  from "./Schedule";
 
 const WelcomePage: React.FC = () => {
   return (
@@ -12,25 +12,14 @@ const WelcomePage: React.FC = () => {
         <Typography variant="body1" gutterBottom>
           We're delighted to have you celebrate this special day with us.
         </Typography>
-        <Box sx={{ mt: 4 }}>
-          <Button
-            component={RouterLink}
-            to="/menu"
-            variant="contained"
-            color="primary"
-          >
-            View Menu
-          </Button>
-          <Button
-            component={RouterLink}
-            to="/seating"
-            variant="contained"
-            color="secondary"
-          >
-            Seating Chart
-          </Button>
-        </Box>
+        <Typography variant="h4" gutterBottom>
+          Our Love Story
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+          ...
+        </Typography>
       </Paper>
+      < Schedule />
     </Container>
   );
 };

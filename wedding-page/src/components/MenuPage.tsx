@@ -68,7 +68,7 @@ const MenuPage: React.FC = () => {
           ].map((section, idx) => (
             <Box key={section.title} my={3} width="100%">
               {idx > 0 && <Divider />}
-              <Typography variant="h5" mt={idx > 0 ? 3 : 0} align="center"> 
+              <Typography variant="h5" mt={idx > 0 ? 3 : 0} align="center">
                 {section.title}
               </Typography>
               <List>
