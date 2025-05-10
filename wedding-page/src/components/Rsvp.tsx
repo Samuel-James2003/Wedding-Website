@@ -13,9 +13,9 @@ import {
 } from "@mui/material";
 
 const Rsvp: React.FC = () => {
-  const [attendance, setAttendance] = useState("Yes");
+  const [attendance, setAttendance] = useState("");
   const [names, setNames] = useState("");
-  const [accommodation, setAccommodation] = useState("Yes");
+  const [accommodation, setAccommodation] = useState("");
   const [dietary, setDietary] = useState("");
   const [dinnerPreference, setDinnerPreference] = useState("");
   const [message, setMessage] = useState("");
