@@ -1,4 +1,5 @@
 import React from "react";
+import menuBG from "./images/menu-bg.png";
 import {
   Container,
   Typography,
@@ -15,7 +16,7 @@ const MenuPage: React.FC = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: 'url("/images/menu-bg.png")',
+        backgroundImage: menuBG,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
