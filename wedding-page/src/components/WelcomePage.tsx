@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Typography, Paper } from "@mui/material";
 import Schedule from "./Schedule";
+import { AppPaths } from "../utils/AppPaths";
 
 const WelcomePage: React.FC = () => {
   return (
     <div
       style={{
-        backgroundImage: 'url("/images/welcome_page_frame.png")',
+        backgroundImage: `url(${AppPaths.imageUrl("/images/welcome-page-frame.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

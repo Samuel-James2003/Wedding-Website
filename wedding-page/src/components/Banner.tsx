@@ -16,13 +16,14 @@ import {
   useTheme,
 } from "@mui/material";
 
+import { AppPaths } from "../utils/AppPaths";
+
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Menu", path: "/menu" },
   { label: "RSVP", path: "/rsvp" },
   { label: "Seating chart", path: "/seating" },
   { label: "Registry", path: "/registry" },
-  { label: "Schedule", path: "/schedule" },
   { label: "FAQ", path: "/faq" },
 ];
 
@@ -54,7 +55,7 @@ const Banner: React.FC = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Box display="flex" alignItems="center">
-          <img src="/images/flower_3.svg" alt="Decorative" style={{ width: 32, height: 32, marginRight: 8, marginBottom: 8 }} />
+          <img src={AppPaths.imageUrl("/images/flower-3.svg")} alt="Decorative" style={{ width: 32, height: 32, marginRight: 8, marginBottom: 8 }} />
           <Typography
             variant="h6"
             sx={{

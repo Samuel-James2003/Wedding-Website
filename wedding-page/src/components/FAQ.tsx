@@ -15,7 +15,7 @@ const FAQ: React.FC = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: 'url("/images/faq-bg.png")',
+        backgroundImage: 'url("./images/faq-bg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
