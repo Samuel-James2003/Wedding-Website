@@ -10,6 +10,7 @@ import {
   Button,
   Paper,
   Box,
+  Typography,
 } from "@mui/material";
 
 const Rsvp: React.FC = () => {
@@ -84,6 +85,9 @@ const Rsvp: React.FC = () => {
       minHeight="100vh"
     >
       <Paper elevation={3} sx={{ p: 4, width: "100%", maxWidth: 600 }}>
+      <Typography variant="h4" gutterBottom align="center">
+        Please fill out the form below to RSVP
+      </Typography>
         <FormControl fullWidth>
           <FormLabel id="rsvp-group">Will you be attending?</FormLabel>
           <RadioGroup
