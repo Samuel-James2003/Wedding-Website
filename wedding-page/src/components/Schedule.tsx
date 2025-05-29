@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Container, Typography, Paper, Box, Button } from "@mui/material";
-import { formatDistanceToNow } from "date-fns";
 
 const Schedule: React.FC = () => {
   const woodstockDate = React.useMemo(
@@ -51,12 +50,23 @@ const Schedule: React.FC = () => {
 
   useEffect(() => {
     const updateCountdowns = () => {
-      setWoodstockCountdown(
-        formatDistanceToNow(woodstockDate, { addSuffix: true })
-      );
-      setWeddingCountdown(
-        formatDistanceToNow(weddingDate, { addSuffix: true })
-      );
+      const now = new Date();
+
+      const getDetailedCountdown = (targetDate: Date) => {
+        const totalMinutes = Math.max(
+          0,
+          Math.floor((targetDate.getTime() - now.getTime()) / 60000)
+        );
+        const months = Math.floor(totalMinutes / (30 * 24 * 60)); // approx month
+        const days = Math.floor((totalMinutes % (30 * 24 * 60)) / (24 * 60));
+        const hours = Math.floor((totalMinutes % (24 * 60)) / 60);
+        const minutes = totalMinutes % 60;
+
+        return `${months} months, ${days} days, ${hours} hours, ${minutes} minutes`;
+      };
+
+      setWoodstockCountdown(getDetailedCountdown(woodstockDate));
+      setWeddingCountdown(getDetailedCountdown(weddingDate));
     };
 
     updateCountdowns();

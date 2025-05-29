@@ -10,10 +10,13 @@ import {
   ListItemText,
   Toolbar,
   Button,
+  Typography,
   Box,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+
+import { AppPaths } from "../utils/AppPaths";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -21,7 +24,6 @@ const navItems = [
   { label: "RSVP", path: "/rsvp" },
   { label: "Seating chart", path: "/seating" },
   { label: "Registry", path: "/registry" },
-  { label: "Schedule", path: "/schedule" },
   { label: "FAQ", path: "/faq" },
 ];
 
@@ -43,8 +45,29 @@ const Banner: React.FC = () => {
     };
 
   return (
-    <AppBar position="sticky">
-      <Toolbar>
+    <AppBar
+      position="sticky"
+      sx={{
+        backgroundColor: "#fce4ec", // soft pink
+        color: "#880e4f", // romantic dark pink text
+        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+      }}
+    >
+      <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Box display="flex" alignItems="center">
+          <img src={AppPaths.imageUrl("/images/flower-3.svg")} alt="Decorative" style={{ width: 32, height: 32, marginRight: 8, marginBottom: 8 }} />
+          <Typography
+            variant="h6"
+            sx={{
+              fontFamily: "'Great Vibes', cursive",
+              fontWeight: "bold",
+              fontSize: "1.8rem",
+            }}
+          >
+            Our Wedding
+          </Typography>
+        </Box>
+
         {isMobile ? (
           <>
             <IconButton
@@ -57,7 +80,7 @@ const Banner: React.FC = () => {
               <MenuIcon />
             </IconButton>
             <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-              <List>
+              <List sx={{ width: 250 }}>
                 {navItems.map((item) => (
                   <ListItemButton
                     key={item.label}
@@ -76,9 +99,16 @@ const Banner: React.FC = () => {
             {navItems.map((item) => (
               <Button
                 key={item.label}
-                color="inherit"
                 component={Link}
                 to={item.path}
+                sx={{
+                  color: "#880e4f",
+                  fontWeight: "bold",
+                  borderRadius: "20px",
+                  "&:hover": {
+                    backgroundColor: "#f8bbd0",
+                  },
+                }}
               >
                 {item.label}
               </Button>

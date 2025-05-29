@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
 import { WelcomePage, MenuPage, SeatingChart, Rsvp, Registry, Banner, FAQ, Schedule } from "./components"
-import { publicUrl } from './utils/publicurl';
+import { AppPaths } from './utils/AppPaths';
 
 
 const App: React.FC = () => {
@@ -12,7 +12,7 @@ const App: React.FC = () => {
 
   return (
     
-    <Router basename={publicUrl}>
+    <Router basename={AppPaths.publicUrl}>
       <Banner />
       <div>
         <Routes>

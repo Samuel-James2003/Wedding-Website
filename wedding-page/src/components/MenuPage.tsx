@@ -10,12 +10,14 @@ import {
   Box,
 } from "@mui/material";
 
+import { AppPaths } from "../utils/AppPaths";
+
 const MenuPage: React.FC = () => {
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: 'url("/images/menu-bg.png")',
+        backgroundImage: `url(${AppPaths.imageUrl("./images/menu-bg.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
