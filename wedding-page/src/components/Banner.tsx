@@ -55,7 +55,11 @@ const Banner: React.FC = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Box display="flex" alignItems="center">
-          <img src={AppPaths.imageUrl("/images/flower-3.svg")} alt="Decorative" style={{ width: 32, height: 32, marginRight: 8, marginBottom: 8 }} />
+          <img
+            src={AppPaths.imageUrl("/images/flower-3.svg")}
+            alt="Decorative"
+            style={{ width: 32, height: 32, marginRight: 8, marginBottom: 8 }}
+          />
           <Typography
             variant="h6"
             sx={{
@@ -79,7 +83,11 @@ const Banner: React.FC = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <Drawer
+              anchor="left"
+              open={drawerOpen}
+              onClose={toggleDrawer(false)}
+            >
               <List sx={{ width: 250 }}>
                 {navItems.map((item) => (
                   <ListItemButton

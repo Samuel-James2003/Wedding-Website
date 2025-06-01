@@ -1,150 +1,81 @@
 import React from "react";
 import {
-  Box,
-  Card,
-  CardContent,
+  Container,
   Typography,
-  Button,
-  Tooltip,
+  Grid,
+  Paper,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
 } from "@mui/material";
 
-interface Seat {
-  id: number;
-  pInitial: string;
-  fullName: string;
-}
-
-interface Table {
-  id: number;
-  tableName?: string;
-  seats: Seat[];
-}
-
-const tables = [
-  {
-    id: 1,
-    tableName: "Table A ",
-    seats: [
-      { id: 0, pInitial: "Place H", fullName: "Samuel James" },
-      { id: 1, pInitial: "Place H", fullName: "Jessica Smith" },
-      { id: 2, pInitial: "Place H", fullName: "Michael Johnson" },
-      { id: 3, pInitial: "Place H", fullName: "Emily Davis" },
-      { id: 4, pInitial: "Place H", fullName: "William Brown" },
-      { id: 5, pInitial: "Place H", fullName: "Olivia Wilson" },
-      { id: 6, pInitial: "Place H", fullName: "James Taylor" },
-      { id: 7, pInitial: "Place H", fullName: "Sophia Anderson" },
-    ],
-  },
-  {
-    id: 2,
-    tableName: "Table B",
-    seats: [
-      { id: 0, pInitial: "Place H", fullName: "Liam Brown" },
-      { id: 1, pInitial: "Place H", fullName: "Emma Wilson" },
-      { id: 2, pInitial: "Place H", fullName: "Noah Johnson" },
-      { id: 3, pInitial: "Place H", fullName: "Ava Davis" },
-    ],
-  },
-  {
-    id: 3,
-    tableName: "Wedding Party",
-    seats: [
-      { id: 0, pInitial: "Samuel J", fullName: "Samuel James" },
-      { id: 1, pInitial: "David L", fullName: "David Marco Laufer" },
-      { id: 2, pInitial: "Mateo J", fullName: "Mateo James" },
-      {
-        id: 3,
-        pInitial: "Antionio M",
-        fullName: "Antonio Miguel Lopez Vargez",
-      },
-      { id: 4, pInitial: "Joe ?", fullName: "Joe ?" },
-      { id: 5, pInitial: "Josh ?", fullName: "Josh ?" },
-      { id: 6, pInitial: "Josh E", fullName: "Josh Elek" },
-      { id: 7, pInitial: "Ben S", fullName: "Ben Sodergren" },
-    ],
-  },
-  {
-    id: 4,
-    tableName: "Table C",
-    seats: [
-      { id: 0, pInitial: "Place H", fullName: "Liam Brown" },
-      { id: 1, pInitial: "Place H", fullName: "Emma Wilson" },
-      { id: 2, pInitial: "Place H", fullName: "Noah Johnson" },
-      { id: 3, pInitial: "Place H", fullName: "Ava Davis" },
-      { id: 4, pInitial: "Place H", fullName: "Mia Brown" },
-      { id: 5, pInitial: "Place H", fullName: "Lucas Wilson" },
-      { id: 6, pInitial: "Place H", fullName: "Amelia Taylor" },
-      { id: 7, pInitial: "Place H", fullName: "Ethan Anderson" },
-    ],
-  },
-  {
-    id: 5,
-    tableName: "Table D",
-    seats: [
-      { id: 0, pInitial: "Place H", fullName: "Aiden Brown" },
-      { id: 1, pInitial: "Place H", fullName: "Isabella Wilson" },
-      { id: 2, pInitial: "Place H", fullName: "Mason Johnson" },
-      { id: 3, pInitial: "Place H", fullName: "Mia Davis" },
-      { id: 4, pInitial: "Place H", fullName: "Aiden Brown" },
-      { id: 5, pInitial: "Place H", fullName: "Isabella Wilson" },
-      { id: 6, pInitial: "Place H", fullName: "Mason Johnson" },
-      { id: 7, pInitial: "Place H", fullName: "Mia Davis" },
-    ],
-  },
-];
+import { AppPaths } from "../utils/AppPaths";
 
 const SeatingChart: React.FC = () => {
+  const seatingData = [
+    { table: "Table 1", guests: ["Alice Johnson", "Bob Smith", "Carol Lee"] },
+    {
+      table: "Table 2",
+      guests: ["David Chen", "Emma Martínez", "Frank Patel"],
+    },
+    { table: "Table 3", guests: ["Grace Kim", "Henry Ortiz", "Isabel Ruiz"] },
+    {
+      table: "Table 4",
+      guests: ["Jack Nguyen", "Karen Adams", "Liam O’Connor"],
+    },
+    // …etc.
+  ];
+
   return (
     <Box
-      display="grid"
-      gridTemplateAreas={` 
-        "id1 . id2"
-        ". id3 ."
-        "id4 . id5"
-        `}
-      gridTemplateColumns="1fr 1fr 1fr"
-      gap={4}
-      p={3}
-      sx={{ width: "100%", justifyItems: "center" }}
+      sx={{
+        minHeight: "100vh",
+        backgroundImage: `url(${AppPaths.imageUrl("./images/site-bg.png")})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        p: 2,
+      }}
     >
-      {tables.map((table) => (
-        <Box key={table.id} gridArea={`id${table.id}`}>
-          <TableCard table={table} />
-        </Box>
-      ))}
+      <Container maxWidth="md">
+        <Paper
+          elevation={4}
+          sx={{
+            p: 4,
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            backdropFilter: "blur(10px)",
+          }}
+        >
+          <Typography variant="h3" gutterBottom align="center">
+            Seating Chart
+          </Typography>
+
+          <Grid container spacing={3} justifyContent="center">
+            {seatingData.map((tableInfo, idx) => (
+              <Box key={tableInfo.table} my={1} width="100%">
+              {idx > 0 && <Divider />}
+              <Typography variant="h5" mt={idx > 0 ? 2 : 0} align="center">
+                {tableInfo.table}
+              </Typography>
+              <List>
+                {tableInfo.guests.map((item) => (
+                  <ListItem key={item} sx={{ justifyContent: "center" }}>
+                    <ListItemText primary={item} sx={{ textAlign: "center" }} />
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+            ))}
+          </Grid>
+        </Paper>
+      </Container>
     </Box>
   );
 };
-
-const TableCard: React.FC<{ table: Table }> = ({ table }) => (
-  <Card
-    variant="outlined"
-    sx={{ maxWidth: "25em", width: "auto", minHeight: "5em" }}
-  >
-    <CardContent>
-      <Typography variant="h6" align="center" gutterBottom>
-        {table.tableName}
-      </Typography>
-      <Box display="flex" flexWrap="wrap" gap={1}>
-        {table.seats.map((seat) => (
-          <Tooltip title={seat.fullName} key={seat.id} arrow>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              sx={{
-                width: "auto",
-                height: "2em",
-                padding: 0.5,
-              }}
-            >
-              {seat.pInitial}
-            </Button>
-          </Tooltip>
-        ))}
-      </Box>
-    </CardContent>
-  </Card>
-);
 
 export default SeatingChart;
