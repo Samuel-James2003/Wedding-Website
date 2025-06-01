@@ -4,8 +4,7 @@ import {
   Typography,
   Paper,
   Box,
-  Button,
-  Divider,
+  Button
 } from "@mui/material";
 import { AppPaths } from "../utils/AppPaths";
 const Registry: React.FC = () => {
