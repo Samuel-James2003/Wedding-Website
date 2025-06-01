@@ -70,7 +70,7 @@ const Rsvp: React.FC = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: `url(${AppPaths.imageUrl("./images/menu-bg.png")})`,
+        backgroundImage: `url(${AppPaths.imageUrl("./images/site-bg.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

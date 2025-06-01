@@ -9,13 +9,14 @@ import {
   Paper,
   Box,
 } from "@mui/material";
+import { AppPaths } from "../utils/AppPaths";
 
 const FAQ: React.FC = () => {
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: 'url("./images/faq-bg.png")',
+        backgroundImage: `url(${AppPaths.imageUrl("./images/site-bg.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -30,8 +31,9 @@ const FAQ: React.FC = () => {
           elevation={4}
           sx={{
             p: 4,
+            textAlign: "center",
             backgroundColor: "rgba(255, 255, 255, 0.85)",
-            backdropFilter: "blur(2px)",
+            backdropFilter: "blur(10px)",
           }}
         >
           <Typography variant="h3" gutterBottom align="center">
@@ -41,7 +43,8 @@ const FAQ: React.FC = () => {
           {[
             {
               question: "What is the dress code?",
-              answer: "The dress code is semi-formal. We encourage guests to dress comfortably but elegantly.",
+              answer:
+                "The dress code is semi-formal. We encourage guests to dress comfortably but elegantly.",
             },
             {
               question: "Is there parking available?",

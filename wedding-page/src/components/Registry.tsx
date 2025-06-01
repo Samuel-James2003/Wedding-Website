@@ -12,27 +12,15 @@ const Registry: React.FC = () => {
   return (
     <Box
       sx={{
-        position: "relative",
         minHeight: "100vh",
+        backgroundImage: `url(${AppPaths.imageUrl("./images/site-bg.png")})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         display: "flex",
+        alignItems: "center",
         justifyContent: "center",
         p: 2,
-        overflow: "hidden",
-        "&::before": {
-          content: '""',
-          backgroundImage: `url(${AppPaths.imageUrl(
-            "/images/registry-bg.png"
-          )})`,
-          backgroundRepeat: "repeat",
-          backgroundSize: "300px",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          opacity: 0.3, // Adjust opacity to mute background
-          zIndex: -1,
-        },
       }}
     >
       <Container maxWidth="sm">

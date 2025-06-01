@@ -3,10 +3,10 @@ import { Container, Typography, Paper, Box, Button } from "@mui/material";
 
 const Schedule: React.FC = () => {
   const woodstockDate = React.useMemo(
-    () => new Date("2025-08-28T00:00:00"),
+    () => new Date("2025-08-28T17:00:00"),
     []
   );
-  const weddingDate = React.useMemo(() => new Date("2025-08-30T00:00:00"), []);
+  const weddingDate = React.useMemo(() => new Date("2025-08-30T17:00:00"), []);
 
   const [woodstockCountdown, setWoodstockCountdown] = useState("");
   const [weddingCountdown, setWeddingCountdown] = useState("");
@@ -83,15 +83,14 @@ const Schedule: React.FC = () => {
         p: 2,
       }}
     >
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Paper
           elevation={4}
           sx={{
-            p: 3,
+            p: 4,
             textAlign: "center",
-            maxWidth: "500px",
-            margin: "0 auto",
-            borderRadius: 2,
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            backdropFilter: "blur(10px)",
           }}
         >
           <Typography variant="h4" gutterBottom>
@@ -113,8 +112,8 @@ const Schedule: React.FC = () => {
                 "Woodstock Fair",
                 "Join us for the fair!",
                 "Woodstock Fairgrounds, CT",
-                new Date("2025-08-28T10:00:00"),
-                new Date("2025-08-28T18:00:00")
+                new Date("2025-08-28T17:00:00"),
+                new Date("2025-08-28T22:00:00")
               )}
               download="woodstock-fair.ics"
               sx={{ mt: 1 }}
