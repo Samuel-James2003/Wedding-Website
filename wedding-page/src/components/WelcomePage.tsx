@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography, Paper, Box } from "@mui/material";
-import Schedule from "./Schedule";
+import { Schedule, Gallery } from "./index"; 
 import { AppPaths } from "../utils/AppPaths";
 
 const WelcomePage: React.FC = () => {
@@ -48,6 +48,7 @@ This wedding is not just a celebration of our love. It is also a celebration of 
           </Typography>
         </Paper>
         <Schedule />
+        <Gallery />	
       </Container>
     </Box>
   );

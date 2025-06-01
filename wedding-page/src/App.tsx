@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router";
-import { WelcomePage, MenuPage, SeatingChart, Rsvp, Registry, Banner, FAQ, Schedule } from "./components"
+import { WelcomePage, MenuPage, SeatingChart, Rsvp, Registry, Banner, FAQ, Schedule, Gallery } from "./components"
 import { AppPaths } from './utils/AppPaths';
 
 
@@ -23,6 +23,7 @@ const App: React.FC = () => {
           <Route path="/registry" element={<Registry />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
     </Router>

@@ -6,4 +6,5 @@ import Rsvp from "./Rsvp";
 import Banner from "./Banner";
 import FAQ from "./FAQ";
 import Schedule  from "./Schedule";
-export { MenuPage, SeatingChart, WelcomePage, Registry, Rsvp, Banner, FAQ, Schedule };
+import Gallery from "./Gallery";
+export { MenuPage, SeatingChart, WelcomePage, Registry, Rsvp, Banner, FAQ, Schedule, Gallery };
