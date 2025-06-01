@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Typography,
-  Paper,
-  Box,
-  Button
-} from "@mui/material";
+import { Container, Typography, Paper, Box, Button } from "@mui/material";
 import { AppPaths } from "../utils/AppPaths";
 const Registry: React.FC = () => {
   return (
@@ -17,13 +11,20 @@ const Registry: React.FC = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         display: "flex",
-        alignItems: "center",
         justifyContent: "center",
         p: 2,
       }}
     >
-      <Container maxWidth="sm">
-        <Paper elevation={4} sx={{ p: 4, textAlign: "center" }}>
+      <Container maxWidth="md">
+        <Paper
+          elevation={4}
+          sx={{
+            p: 1,
+            textAlign: "center",
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            backdropFilter: "blur(10px)",
+          }}
+        >
           <Typography variant="h3" gutterBottom>
             Our Registry
           </Typography>
