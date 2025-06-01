@@ -57,7 +57,7 @@ const SeatingChart: React.FC = () => {
 
           <Grid container spacing={3} justifyContent="center">
             {seatingData.map((tableInfo, idx) => (
-              <Box key={tableInfo.table} my={3} width="100%">
+              <Box key={tableInfo.table} my={1} width="100%">
               {idx > 0 && <Divider />}
               <Typography variant="h5" mt={idx > 0 ? 2 : 0} align="center">
                 {tableInfo.table}

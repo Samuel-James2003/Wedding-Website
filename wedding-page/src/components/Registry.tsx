@@ -36,7 +36,7 @@ const Registry: React.FC = () => {
               component="form"
               action="https://www.paypal.com/donate"
               method="post"
-              target="_top"
+              target="_blank"
               sx={{ display: "inline-block", mt: 2 }}
             >
               <input type="hidden" name="business" value="S8DJWMG342CKG" />
@@ -64,19 +64,13 @@ const Registry: React.FC = () => {
             <Button
               variant="contained"
               color="success"
-              href="https://cash.app/"
+              href="https://cash.app/$SamuelJames2003"
               target="_blank"
-              disabled={true}
               sx={{ m: 1 }}
             >
               Cash App
             </Button>
           </Box>
-          <Divider sx={{ my: 2 }} />
-          <Typography variant="h6" gutterBottom>
-            You could also get us a gift card to our favorite stores: [Insert
-            stores here]
-          </Typography>
         </Paper>
       </Container>
     </Box>
