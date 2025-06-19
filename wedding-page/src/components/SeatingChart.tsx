@@ -15,17 +15,22 @@ import { AppPaths } from "../utils/AppPaths";
 
 const SeatingChart: React.FC = () => {
   const seatingData = [
-    { table: "Table 1", guests: ["Alice Johnson", "Bob Smith", "Carol Lee"] },
+    { table: "Table 1",
+      guests: ["Pina", "Scott", "Raymond", "Elaine", "Marco", "Sarah", "Falica", "Jason"] },
     {
       table: "Table 2",
-      guests: ["David Chen", "Emma Martínez", "Frank Patel"],
+      guests: ["Isabelle Laufer", "Doug Dederer", "Mateo James", "Karsyn Storm", "Nichole", "Ben Soldergren" ],
     },
-    { table: "Table 3", guests: ["Grace Kim", "Henry Ortiz", "Isabel Ruiz"] },
+    { table: "Table 3", 
+      guests: ["Samuel James", "David M Laufer", "Josh Simpson", "Joe ?", "Josh Elek", "Antonio Miguel Lopez Vargez"] },
     {
       table: "Table 4",
-      guests: ["Jack Nguyen", "Karen Adams", "Liam O’Connor"],
+      guests: ["Dorothy Laufer", "David A Laufer", "Florence Bauhdhuin", "Claire Kauffemann", "Benedicte", "Juli", "Joe", "Jane"],
     },
-    // …etc.
+    {
+      table: "Table 5",
+      guests: ["Bob", "Falica", "Serena", "Nate", "Brian", "Vincent", "Julia", "Angelina", "Enzo"],
+    },
   ];
 
   return (

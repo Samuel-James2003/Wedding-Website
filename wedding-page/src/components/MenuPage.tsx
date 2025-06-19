@@ -45,27 +45,25 @@ const MenuPage: React.FC = () => {
             {
               title: "Apps",
               items: [
-                "Mini grilled cheese with duck",
-                "Mini quiche",
-                "Salmon canape",
+                "Mini Grilled Cheese with Duck",
+                "Mini Quiche",
+                "Heirloom Tomato Bruschetta with Fresh Basil and Balsamic Glaze",
                 "Spanakopita",
-                "Charcuterie & Crudité board",
+                "Charcuterie & Crudité Board",
               ],
             },
-            { title: "Salad", items: ["House Salad"] },
-            { title: "Pasta Course", items: ["Penne alla vodka"] },
-            { title: "Entrees", items: ["Grilled Salmon", "Chicken marsala"] },
+            { title: "Salad", items: ["Signature Salad with Balsamic Vinaigrette"] },
+            { title: "Pasta Course", items: ["Penne alla Vodka with Fresh Basil and Grated Parmesan"] },
+            { title: "Entrees", items: ["Grilled Atlantic Salmon with Mango Salsa (GF)", "Chicken Marsala (GF)"] },
             {
               title: "Sides",
-              items: ["Roasted Rosemary potatoes", "Asparagus"],
+              items: ["Grilled Asparagus with Lemon Zest and Herbs (GF)"],
             },
             {
               title: "Dessert",
               items: [
-                "Cake (our own)",
-                "Cookies (our own)",
-                "Espresso",
-                "Coffee decaf",
+                "Cake",
+                "Espresso Bar with Assorted Pastries",
               ],
             },
           ].map((section, idx) => (
