@@ -19,9 +19,7 @@ import { AppPaths } from "../utils/AppPaths";
 const Rsvp: React.FC = () => {
   const [attendance, setAttendance] = useState("");
   const [names, setNames] = useState("");
-  const [accommodation, setAccommodation] = useState("");
   const [dietary, setDietary] = useState("");
-  const [dinnerPreference, setDinnerPreference] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -39,11 +37,10 @@ const Rsvp: React.FC = () => {
     const fields = {
       "entry.877086558": attendance,
       "entry.1498135098": names,
-      "entry.898891732": accommodation,
       "entry.398629191": dietary,
-      "entry.949326767": dinnerPreference,
       "entry.2606285": message,
     };
+    
     Object.entries(fields).forEach(([name, value]) => {
       const input = document.createElement(
         value.includes("\n") ? "textarea" : "input"
@@ -123,42 +120,12 @@ const Rsvp: React.FC = () => {
 
                 <Divider sx={{ my: 2 }} />
 
-                <FormLabel>Will you require hotel accommodation?</FormLabel>
-                <RadioGroup
-                  value={accommodation}
-                  onChange={(e) => setAccommodation(e.target.value)}
-                >
-                  <FormControlLabel
-                    value="Yes"
-                    control={<Radio />}
-                    label="Yes"
-                  />
-                  <FormControlLabel value="No" control={<Radio />} label="No" />
-                </RadioGroup>
-
-                <Divider sx={{ my: 2 }} />
-
-                <FormLabel>Dietary requirements (if any)</FormLabel>
+                <FormLabel>Dietary requirements (optional)</FormLabel>
                 <TextField
                   fullWidth
                   variant="standard"
                   value={dietary}
                   onChange={(e) => setDietary(e.target.value)}
-                />
-
-                <Divider sx={{ my: 2 }} />
-
-                <FormLabel sx={{ whiteSpace: "pre-line" }}>
-                  {
-                    "For each person attending please enter the name and meal preference. The options are salmon and chicken.\n\nFor example:\nName - Meal preference"
-                  }
-                </FormLabel>
-                <TextField
-                  fullWidth
-                  multiline
-                  variant="standard"
-                  value={dinnerPreference}
-                  onChange={(e) => setDinnerPreference(e.target.value)}
                 />
 
                 <Divider sx={{ my: 2 }} />

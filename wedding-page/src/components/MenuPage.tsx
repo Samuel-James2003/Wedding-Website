@@ -52,19 +52,25 @@ const MenuPage: React.FC = () => {
                 "Charcuterie & Crudité Board",
               ],
             },
-            { title: "Salad", items: ["Signature Salad with Balsamic Vinaigrette"] },
-            { title: "Pasta Course", items: ["Penne alla Vodka with Fresh Basil and Grated Parmesan"] },
-            { title: "Entrees", items: ["Grilled Atlantic Salmon with Mango Salsa (GF)", "Chicken Marsala (GF)"] },
+            {
+              title: "Entrees",
+              items: [
+                "Grilled Atlantic Salmon with Mango Salsa (GF)",
+                "Chicken Marsala (GF)",
+                "Penne alla Vodka with Fresh Basil and Grated Parmesan",
+              ],
+            },
             {
               title: "Sides",
-              items: ["Grilled Asparagus with Lemon Zest and Herbs (GF)"],
+              items: [
+                "Grilled Asparagus with Lemon Zest and Herbs (GF)",
+                "Signature Salad with Balsamic Vinaigrette",
+                "Fresh Baked Bread with Herb Butter",
+              ],
             },
             {
               title: "Dessert",
-              items: [
-                "Cake",
-                "Espresso Bar with Assorted Pastries",
-              ],
+              items: ["Cake", "Espresso Bar with Assorted Pastries"],
             },
           ].map((section, idx) => (
             <Box key={section.title} my={3} width="100%">

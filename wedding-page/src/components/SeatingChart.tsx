@@ -2,9 +2,9 @@ import React from "react";
 import {
   Container,
   Typography,
-  Grid,
   Paper,
   Box,
+  Grid,
   List,
   ListItem,
   ListItemText,
@@ -15,21 +15,40 @@ import { AppPaths } from "../utils/AppPaths";
 
 const SeatingChart: React.FC = () => {
   const seatingData = [
-    { table: "Table 1",
-      guests: ["Pina", "Scott", "Raymond", "Elaine", "Marco", "Sarah", "Falica", "Jason"] },
+    {
+      table: "Table 1",
+      guests: [
+        ["Pina", "Scott", "Raymond", "Elaine"],
+        ["Marco", "Sarah", "Falica", "Jason"],
+      ],
+    },
     {
       table: "Table 2",
-      guests: ["Isabelle Laufer", "Doug Dederer", "Mateo James", "Karsyn Storm", "Nichole", "Ben Soldergren" ],
+      guests: [
+        ["Isabelle", "Doug", "Mateo"],
+        ["Karsyn", "Jeff", "Ben"],
+      ],
     },
-    { table: "Table 3", 
-      guests: ["Samuel James", "David M Laufer", "Josh Simpson", "Joe ?", "Josh Elek", "Antonio Miguel Lopez Vargez"] },
+    {
+      table: "Table 3",
+      guests: [
+        ["Samuel", "David M", "Josh"],
+        ["Joe", "Josh", "Antonio"],
+      ],
+    },
     {
       table: "Table 4",
-      guests: ["Dorothy Laufer", "David A Laufer", "Florence Bauhdhuin", "Claire Kauffemann", "Benedicte", "Juli", "Joe", "Jane"],
+      guests: [
+        ["Dorothy", "David A", "Florence", "Claire"],
+        ["Benedicte", "Juli", "Joe", "Jane"],
+      ],
     },
     {
       table: "Table 5",
-      guests: ["Bob", "Falica", "Serena", "Nate", "Brian", "Vincent", "Julia", "Angelina", "Enzo"],
+      guests: [
+        ["Bob", "Falica", "Serena", "Nate"],
+        ["Brian", "Vincent", "Julia", "Angelina", "Enzo"],
+      ],
     },
   ];
 
@@ -63,18 +82,30 @@ const SeatingChart: React.FC = () => {
           <Grid container spacing={3} justifyContent="center">
             {seatingData.map((tableInfo, idx) => (
               <Box key={tableInfo.table} my={1} width="100%">
-              {idx > 0 && <Divider />}
-              <Typography variant="h5" mt={idx > 0 ? 2 : 0} align="center">
-                {tableInfo.table}
-              </Typography>
-              <List>
-                {tableInfo.guests.map((item) => (
-                  <ListItem key={item} sx={{ justifyContent: "center" }}>
-                    <ListItemText primary={item} sx={{ textAlign: "center" }} />
-                  </ListItem>
-                ))}
-              </List>
-            </Box>
+                {idx > 0 && <Divider />}
+                <Typography variant="h5" mt={idx > 0 ? 2 : 0} align="center">
+                  {tableInfo.table}
+                </Typography>
+                <Grid container rowSpacing={2} columnSpacing={4}>
+                    {tableInfo.guests.map((column, colIdx) => (
+                      <Grid key={colIdx} size={6}>
+                        <List dense>
+                          {column.map((guest) => (
+                            <ListItem
+                              key={guest}
+                              sx={{ justifyContent: "center" }}
+                            >
+                              <ListItemText
+                                primary={guest}
+                                sx={{ textAlign: "center", typography: "h1" }}
+                              />
+                            </ListItem>
+                          ))}
+                        </List>
+                      </Grid>
+                    ))}
+                  </Grid>
+              </Box>
             ))}
           </Grid>
         </Paper>

@@ -8,6 +8,7 @@ import {
   Divider,
   Paper,
   Box,
+  Button,
 } from "@mui/material";
 import { AppPaths } from "../utils/AppPaths";
 
@@ -58,6 +59,15 @@ const FAQ: React.FC = () => {
               question: "What time should I arrive?",
               answer: "We recommend arriving around 5:00 PM.",
             },
+            {
+              question: "What should I wear?",
+              answer: "We suggest wearing soft pastels or floral patterns to match the wedding theme."
+            },
+            {
+              question: "Hotel recommendations?",
+              answer: "We recommend the following hotels for your stay:",
+              button: <Button variant="outlined" onClick={() => window.open("https://maps.app.goo.gl/dXPvqYq4SNx3TxE3A", "_blank")}>See Hotels</Button>
+            }
           ].map((faq, idx) => (
             <Box key={faq.question} my={3} width="100%">
               {idx > 0 && <Divider />}
@@ -68,6 +78,7 @@ const FAQ: React.FC = () => {
                 <ListItem sx={{ justifyContent: "center" }}>
                   <ListItemText
                     primary={faq.answer}
+                    secondary={faq.button ? faq.button : ""}
                     sx={{ textAlign: "center" }}
                   />
                 </ListItem>

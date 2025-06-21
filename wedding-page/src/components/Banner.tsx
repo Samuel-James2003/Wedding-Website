@@ -84,7 +84,7 @@ const Banner: React.FC = () => {
               <MenuIcon />
             </IconButton>
             <Drawer
-              anchor="left"
+              anchor="right"
               open={drawerOpen}
               onClose={toggleDrawer(false)}
             >

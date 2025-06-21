@@ -42,7 +42,7 @@ const WelcomePage: React.FC = () => {
 
 Over time, we became each other’s best friend, biggest cheerleader, and safe place. Together, we have celebrated milestones, faced challenges, and built a love rooted in trust, respect, and an endless supply of laughter.<div/><br/>
 
-We have grown not just as a couple, but as individuals. We have supported one another, encouraged each other, and shared a vision for the life we want to create. Now, we are so excited to begin this next chapter as husband and wife.<div/><br/>
+We have grown not just as a couple, but as individuals. We have supported one another, encouraged each other, and shared a vision for the life we want to create. Now, we are so excited to begin this next chapter as husband and husband.<div/><br/>
 
 This wedding is not just a celebration of our love. It is also a celebration of all the moments, big and small, that brought us here. Thank you for being a part of our journey. We cannot wait to share this special day with you.
           </Typography>
