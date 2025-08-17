@@ -73,7 +73,7 @@ const MenuPage: React.FC = () => {
             },
             {
               title: "Dessert",
-              items: ["Cake", "Espresso Bar with Assorted Pastries"],
+              items: ["Lemon Cake with Raspberry Filling", "Espresso Bar with Assorted Pastries"],
             },
             { title: "Beverages", items: ["Coffee", "Tea", "Soft Drinks", "Wine", "Beer", "Select Liquors"] },
           ].map((section, idx) => (
