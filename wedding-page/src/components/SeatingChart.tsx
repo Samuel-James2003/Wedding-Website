@@ -18,15 +18,15 @@ const SeatingChart: React.FC = () => {
     {
       table: "Table 1",
       guests: [
-        ["Pina", "Scott", "Raymond", "Elaine"],
-        ["Marco", "Sarah", "Falica", "Jason"],
+        ["Jose", "Scott", "Raymond", "Elaine"],
+        ["Marco", "Sarah", "Felecia", "Jason", "Tom"],
       ],
     },
     {
       table: "Table 2",
       guests: [
-        ["Isabelle", "Doug", "Mateo"],
-        ["Karsyn", "Jeff", "Ben"],
+        ["Isabelle", "Doug", "Chrissie", "Mateo"],
+        ["Karsyn", "Jeff", "Ben", "Arionna", "Austin"],
       ],
     },
     {
@@ -46,8 +46,8 @@ const SeatingChart: React.FC = () => {
     {
       table: "Table 5",
       guests: [
-        ["Bob", "Falica", "Serena", "Nate"],
-        ["Brian", "Vincent", "Julia", "Angelina", "Enzo"],
+        ["Bob", "Felecia", "Serena", "Nate"],
+        ["Brian", "Angelina", "Enzo"],
       ],
     },
   ];

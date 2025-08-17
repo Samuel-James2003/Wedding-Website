@@ -56,7 +56,7 @@ const MenuPage: React.FC = () => {
               title: "Entrees",
               items: [
                 "Grilled Atlantic Salmon with Mango Salsa (GF)",
-                "Chicken Marsala (GF)",
+                "Chicken Picatta (GF)",
                 "Penne alla Vodka with Fresh Basil and Grated Parmesan",
               ],
             },
@@ -65,13 +65,17 @@ const MenuPage: React.FC = () => {
               items: [
                 "Grilled Asparagus with Lemon Zest and Herbs (GF)",
                 "Signature Salad with Balsamic Vinaigrette",
-                "Fresh Baked Bread with Herb Butter",
+                "Roasted Fingerling Potatoes",
+                "Summer grilled vegetables",
+                "Sauteed Broccoli Rabe with Garlic and Sausage",
+                "Fresh Baked Bread Rolls and Focaccia with Herb Butter",
               ],
             },
             {
               title: "Dessert",
               items: ["Cake", "Espresso Bar with Assorted Pastries"],
             },
+            { title: "Beverages", items: ["Coffee", "Tea", "Soft Drinks", "Wine", "Beer", "Select Liquors"] },
           ].map((section, idx) => (
             <Box key={section.title} my={3} width="100%">
               {idx > 0 && <Divider />}
